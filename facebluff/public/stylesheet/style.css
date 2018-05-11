@@ -1,0 +1,414 @@
+/*GENERICOS*/
+/*Para centrar los div al 50%*/
+#menu,#logo,.warnings,.title,
+.requests-list, .searchbar,
+.f-list, .result-list,.form-options{
+  margin:auto;
+	width: 50%;
+  
+}
+/*Fondo*/
+header, footer{
+	background-color: #031727;
+}
+
+/*Botones en listas*/
+.requests-list button, .answers-list button{
+  float: right;
+  margin-top:30px;
+  margin-right: 8px;
+  width: 15%;
+  border: 0;
+  padding: 10px;
+	background: #18c29c;
+	color:#031727;
+	border-radius: 15px;
+}
+
+/*Generico para las imagenes en listas */
+.user-avatar{
+  height: 60px;
+  border: black 1px solid;
+  margin-right: 10px;
+}
+
+/*Generico para subtitulos de pag usuarios*/
+.subtittle{
+  color: #126872;
+  text-align: center;
+}
+
+/*Generico para quitarle los puntos a las listas*/
+.requests-list ul,
+.f-list ul, .result-list ul,
+.answers-list ul{
+  list-style-type: none;
+}
+/*Generalizacion de Botones Formularios*/
+.form button, .register-form button, .new-question button{
+	text-transform: uppercase;
+	width: 50%;
+  border: 0;
+  padding: 10px;
+	background: #18c29c;
+	color:#031727;
+	border-radius: 15px;
+}
+
+/*Fuentes*/
+body{
+	font-family: 'Gloria Hallelujah', cursive;
+}
+/*Nombres Pie de Pagina*/
+.darklight{
+	color: #0b877d;
+}
+
+
+/*MENU , LOGO */
+#logo img{
+  max-width: 100%;
+}
+/*Lista no enumerada del menu*/
+#menu ul{
+	list-style-type: none;
+	font-size: 20px;
+	margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/*Elementos del Menu*/
+#menu li{
+	float:left;
+}
+/* a todos los link  que esten dentro de un li */
+li a {
+    display: block;
+    color: #18C29C;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* a todos los link  que esten dentro de un li cuando el raton esta encima*/
+li a:hover {
+    background-color: #126872;
+	   color: #88F9D4;
+}
+
+/*CONTENEDOR*/
+main{
+	clear: both;	
+}
+
+
+/*LOGIN*/
+/*Contenedor de Login*/
+.login-page {
+  width: 370px;
+  padding: 2% 0 0;
+  margin: auto;
+}
+
+/*form de login*/
+.form{
+	position: relative;
+  z-index: 1;
+	background-color: #126872;
+	max-width: 370px;
+  margin: 0 auto 100px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	border-radius: 20px;
+}
+/*Formato input de LOGIN*/
+.form input{
+	background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+/*Parrafo si no estas registrado*/
+.form p{
+	color:#031727;
+}
+
+/* Link que sugerencia registro*/
+.form a{
+	text-decoration: none;
+	color:#88f9d4;
+}
+
+
+/*PIE DE PAG*/
+footer{
+	color:#88F9D4;
+	text-align: center;
+}
+
+
+/*IMG MENU*/
+/*li que contiene la data del usuario* en el menu*/
+.user-data{
+  margin-left: 50px;
+  color:#88F9D4;
+  font-size: 15px;
+}
+/*imagen del usuario con sus puntos en el menu*/
+.user-points{
+  height: 25px;
+  padding-top:  25px;
+  padding-right:5px;
+}
+
+/*FRIENDS*/
+/*input de busqueda de usuarios*/
+.searchbar input{
+  width:65%;
+}
+/*Boton de Busqueda usuario*/
+.searchbar button{
+   width: 12%;
+  border: 0;
+  padding: 8px;
+	background: #18c29c;
+	color:#031727;
+	border-radius: 15px;
+}
+/*SEARCHLIST*/
+/*Lista de usuarios encontrados*/
+.result-list {
+  padding: 0 0 3%;
+  margin: auto;
+}
+/*Boton agregar un Usuario*/
+.add-friend{
+  float: right;
+  margin-top:30px;
+  width: 20%;
+  border: 0;
+  padding: 10px;
+	background: #18c29c;
+	color:#031727;
+	border-radius: 15px;
+}
+
+/*Boton de Solicitud Amistad Realizada*/
+.requested-friend{
+  float: right;
+  margin-top: 30px;
+  width: 20%;
+  border:0;
+  border-radius: 15px;
+  background-color: #88f9d4;
+  color: #0b877d;
+  padding: 10px;
+}
+
+/*ANSWER + GUESSING*/
+/* ul de opciones de pregunta*/
+.options {
+   list-style-type: none;
+}
+/*las opciones de la pregunta*/
+.options li{
+  background-color: #031727;
+  padding: 6px;
+  margin: 5px;
+  color: #0b877d;
+  font-weight: bold;
+}
+/*el input texto para la opcion OTRO*/
+.options input[type="text"]{
+  width: 50%
+}
+/*Cambia el color de fondo y texto de OTRO*/
+.other-opt{
+  background-color:  #18c29c !important;
+  color: #031727  !important;
+}
+
+.form-options button{
+  margin-left: 200px;
+  text-transform: uppercase;
+	width: 40%;
+  border: 0;
+  padding: 10px;
+	background-color: #126872 ;
+	color: #88f9d4;
+	border-radius: 15px;
+}
+
+.form-options p{
+  font-family: Verdana;
+  font-weight: bold;
+  color:   #18C29d;
+}
+
+
+/**QUESTION VIEW**/
+/*Parrafo que dice que la pregunta no se ha contestado*/
+.intro{
+  margin:auto;
+  width: 65%
+}
+
+/*Boton del parrafo*/
+.intro button{
+   margin-left: 60px;
+   border: 0;
+   padding: 10px;
+	 background-color: #126872 ;
+	 color: #88f9d4;
+	 border-radius: 15px;
+}
+/*lista de usuarios que contestaron*/
+.answers-list{
+  margin: auto;
+  width: 60%;
+}
+/*Acierto y Fallo*/
+.result{
+  float: right;
+  height: 40px;
+  margin-right: 45px;
+  margin-top: 6px;
+}
+
+/*REGISTER*/
+/*Contenedor de registro y nueva pregunta*/
+.register-page,.new-question{
+  width: 450px;
+  padding: 2% 0 2%;
+  margin:auto;
+}
+
+/*Formulario Registo*/
+.register-form, .new-question{
+  background-color: #126872;
+	max-width: 450px;
+  padding: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	border-radius: 20px;
+}
+
+/*Etiquetas Registro*/
+.register-page label, .new-question label{
+  float:left;
+  width: 150px;
+}
+
+/*Colocar los input del mismo tamano*/
+.register-page input[type="text"],
+.new-question input[type="text"],
+.register-page input[type="email"],
+.register-page input[type="password"],
+.register-page input[type="date"]{
+  width: 55%;
+  text-align: center;
+}
+
+/*Redimensionar el input para cargar  foto*/
+.inputPhoto{
+  width:50%;
+}
+
+/*Ubicacion del Formulario*/
+.register-form button , .new-question button{
+  margin-top: 30px;
+  margin-left:90px;
+}
+
+/*PROFILE*/
+/*Capa que contiene a la capa del perfil usuario*/
+.profile-info{
+  margin: auto;
+  width: 50%;
+  padding: 0 0 2%;
+}
+
+/*Caracteristicas de la imagen del perfil*/
+.profile-info img{
+  float: left;
+  height: 150px;
+  padding-top: 20px;
+  padding-left: 60px;
+  padding-right: 80px;
+}
+
+/*Capa que contiene el boton*/
+.profile-info div{
+  margin: auto;
+  width: 20%
+}
+
+/*Boton Modificar Perfil*/
+.profile-info div button,
+/*Boton Crear Pregunta*/
+.add-question div button{
+   border: 0;
+  text-transform: uppercase;
+   padding: 10px;
+	 background-color: #126872 ;
+	 color: #88f9d4;
+	 border-radius: 15px;
+}
+
+/*QUESTIONS-LIST*/
+/*Contenedor de la lista de preguntas aleatorias*/
+.questions-list{
+  margin: auto;
+  width: 65%
+}
+
+/*Contenedor agregar preguntas*/
+.add-question{
+  margin: auto;
+  width: 50%;
+}
+
+/*Contenedor interno que contiene unicamente al boton*/
+.add-question div{
+  margin:auto;
+  width: 25%
+}
+
+/**/
+.warnings{
+  color: #18c29c;
+}
+.name{
+  display: inline !important;
+  background-color: white !important;
+  color: #031727;
+}
+
+/*Notificaciones de  Resultados*/
+.note{
+  font-size: 18px;
+  text-align: center;
+  color: #18c29c;
+}
+
+.questions-list li{
+  list-style: none;
+}
+
+
+/*NEW QUESTION*/
+.opt{
+  width: 350px !important;
+}
+
+.new-question textarea{
+  display: block;
+  margin: auto;
+  width: 350px;
+  height: 60px
+}

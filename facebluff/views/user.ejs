@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Profile</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/profile">Profile</a>
+				</li>
+				<li>
+					<a href="/friends">Friends</a>
+				</li>
+				<li>
+					<a href="/questions">Questions</a>
+				</li>
+				<li>
+					<a href="/logout">Logout</a>
+				</li>
+				<li class="user-data">
+                                    <% if(photo===1){ %>
+                                    <img src="/image/<%= id %>" class="user-points">
+                                    <% }else{ %>
+                                    <img src="/img/NoProfile.png" class="user-points">
+                                    <% } %>
+                                    
+                                    <%= points %> points</li>
+			</ul>
+			
+		</div>
+	</header>
+	<main>
+		<div class="title">
+			<h1 class="subtittle"><%= user.name %>'s Profile</h1>
+		</div>
+		<div class="profile-info">
+                     <% if(photo===1){ %>
+                        <img class="imgUsuario" src="/image/<%= user.id %>" alt="fotoUsuario">
+                    <% }else{ %>
+                        <img src="/img/NoProfile.png">
+                    <% } %>
+			<!--<img class="imgUsuario" src="/image/<%= user.id %>" alt="fotoUsuario">-->
+			<p>
+				<h3><%= user.email %></h3>
+                                <strong>Name:</strong> <%= user.name %><br>
+                                <strong>Birthdate:</strong> 
+                                    <%= user.bday.getMonth() %> /
+                                    <%= user.bday.getDate() %> /
+                                    <%= user.bday.getYear() %><br>
+                                <strong>Points:</strong> <%= user.points %><br>
+			</p>
+		</div>
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>

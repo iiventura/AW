@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Change Profile</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/profile">Profile</a>
+				</li>
+				<li>
+					<a href="/friends">Friends</a>
+				</li>
+				<li>
+					<a href="/questionsList">Questions</a>
+				</li>
+				<li>
+					<a href="/logout">Logout</a>
+				</li>
+				<li class="user-data">
+                                    <% if(photo===1){ %>
+                                    <img src="/image/<%= id %>" class="user-points">
+                                    <% }else{ %>
+                                    <img src="/img/NoProfile.png" class="user-points">
+                                    <% } %>
+                                    <%=user.points%>pts</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div class="title">
+			<h1>Modify User</h1>
+		</div>
+                            
+		<div class="register-page"> <!-- donde se coloca el cuadro -->
+
+                    <form class="register-form" method="post" action="/modify" enctype="multipart/form-data"> <!-- indicamos que creamos un formulario-->
+				
+			<label >Email:</label> <input  type="text" name="email" readonly="readonly"
+                                 placeholder="user@mail.com" value = <%= user.email %>> 
+					
+			<label>Password:</label><input type="password" name="password" placeholder="password" value= <%= user.pass %>>
+					
+			<label>Full name:</label><input type="text" name="name" placeholder="Name FirstName" value= <%= user.name %>>
+					
+			<label>Sex:</label>
+
+                            <% if( user.sex == "M"){%>
+                                Male<input type="radio" name="sex" value="M" checked = true>
+                                Female<input type="radio" name="sex" value="F" > 
+                                Other<input type="radio" name="sex" value="O" >
+
+                             <%  }else if(user.sex == "F") {%>
+                                Male<input type="radio" name="sex" value="M" >
+                                Female<input type="radio" name="sex" value="F" checked = true>
+                                Other<input type="radio" name="sex" value="O" >
+
+                             <% }else{ %>
+                                Male<input type="radio" name="sex" value="M" >
+                                Female<input type="radio" name="sex" value="F" >
+                                Other<input type="radio" name="sex" value="O" checked = true>
+                            <%  }%>
+
+			<label>Date of birth</label>
+                            <input type="date" name="birthdate" placeholder="mm/dd/aaaa" min="1945-12-31" max="2000-01-02">
+	
+			<label >Profile photo</label>
+                            <input class="inputPhoto" type="file" name="foto"> 
+					
+			<button type="submit">Modify User</button>
+		</form>
+            </div>
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>

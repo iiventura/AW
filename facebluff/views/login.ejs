@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+                    <ul>
+                        <li>
+                            <a href="/">Login</a>
+                        </li>
+                        <li>
+                            <a href="/register">New User</a>
+                        </li>
+                    </ul>
+		</div>
+	</header>
+	<main>
+		<div class="title">
+                    <h1><%= title%></h1>
+		</div>
+            <% if(warnings.length>0){ %>
+             <div class="warnings">
+               The information entered on the form is incorrect:
+                <ul>
+                    <% warnings.forEach(function(error) { %>
+                    <li><%= error %></li>
+                    <% }); %>
+                </ul>  
+            </div>
+            <% } %>
+            <div class="login-page">
+                <div class="form">
+                    <form class="login-form" method="post" action="/">
+                        <input type="text" name="email" placeholder="user@mail.com" >
+                        <input type="password" name="password" placeholder="password">
+                        <button type="submit">login</button>
+                        <p class="message">Not registered? 
+                            <a href="/register">Create an account</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>

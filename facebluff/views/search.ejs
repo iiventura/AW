@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Search Results</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/profile">Profile</a>
+				</li>
+				<li>
+					<a href="/friends">Friends</a>
+				</li>
+				<li>
+					<a href="/questions">Questions</a>
+				</li>
+				<li>
+					<a href="/logout">Logout</a>
+				</li>
+				<li class="user-data">
+                                    <% if(photo===1){ %>
+                                    <img src="/image/<%= id %>" class="user-points">
+                                    <% }else{ %>
+                                    <img src="/img/NoProfile.png" class="user-points">
+                                    <% } %>
+                                    
+                                    <%= points %> points</li>
+			</ul>
+			
+		</div>
+	</header>
+	<main>
+            <div class="title">
+		<h1 class="subtittle">Search Results: '<%= word %>'</h1>
+            </div>
+            <div class="result-list">
+		<ul>
+                    <% if (list.length===0){ %>
+                        <li class="note">It was not found  a user with that word</li>
+                    
+                    <% }else{ %>
+                            
+                            <% list.forEach(function(user){ %>
+                            <form>
+                            <li>
+                                <% if(user.photo===0){ %>
+                                    <img src="/img/NoProfile.png" class="user-avatar">
+                                <% }else{ %>
+                                    <img src="/image/<%= user.id %>" class="user-avatar">
+                                <% } %>
+                                
+                                <a class="name" href="/user/<%= user.id %>"><%= user.name %></a>
+                                <% if(user.request==='none'){ %> 
+                                <button type="submit" formmethod="get" formaction="/request/<%= user.id %>" class="add-friend">Add Friend</button>
+                                <% }else{%>
+                                <button  class="requested-friend">Requested</button>
+                                <% } %>
+                            </li>
+                            </form>
+                            <% });%>
+                            
+                    <% } %>
+                            
+				
+			</ul>
+		</div>
+		
+		
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>

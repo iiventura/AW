@@ -1,0 +1,49 @@
+Falta: 
+No imagen en [ Pregunta i, Contestar/Adivinar ]
+Verificar el process de new question
+modificar el css para el form de new question
+
+
+ photo:request.session.photo
+
+
+ <li class="user-data">
+ <% if(photo===1){ %>
+ <img src="/image/<%= id %>" class="user-points">
+ <% }else{ %>
+ <img src="/img/NoProfile.png" class="user-points">
+  <% } %>
+ <%= points %> points</li>
+
+
+-Error en el proccesForm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Buscamos los amigos del usuario i
+SELECT have.id_friend FROM have WHERE have.id_user=?
+
+
+*Insertamos en Other
+INSERT INTO `other`(`id_user`, `id_friend`, `id_question`, `id_answer`) VALUES (?,?,?,1)
+
+*Buscar amigos que han contestado 
+SELECT  other.state, myself.id_answer, user.name, user.photo
+FROM other
+INNER JOIN myself ON other.id_friend=myself.id_user
+INNER JOIN user ON other.id_friend=user.id_user
+WHERE other.id_user=44 AND other.id_question=1  AND myself.id_question=other.id_question
+
+

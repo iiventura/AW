@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Friends</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/profile">Profile</a>
+				</li>
+				<li>
+					<a href="/friends">Friends</a>
+				</li>
+				<li>
+					<a href="/questions">Questions</a>
+				</li>
+				<li>
+					<a href="/logout">Logout</a>
+				</li>
+				<li class="user-data">
+                                    <% if(photo===1){ %>
+                                    <img src="/image/<%= id %>" class="user-points">
+                                    <% }else{ %>
+                                    <img src="/img/NoProfile.png" class="user-points">
+                                    <% } %>
+                                    
+                                    <%= points %> points</li>
+			</ul>
+			
+		</div>
+	</header>
+	<main>
+		<div class="title">
+			<h1 class="subtittle">Friend Requests</h1>
+		</div>
+		<div class="requests-list">
+			<ul>
+                        <% waiting.forEach(function(user){ %> 
+                        <form>
+                        <li>
+                            <% if(user.photo===0){ %>
+                                <img src="/img/NoProfile.png" class="user-avatar">
+                            <% }else{ %>
+                                <img src="/image/<%= user.id %>" class="user-avatar">
+                            <% } %>
+                            
+                            <a class="name" href="/user/<%= user.id %>"><%= user.name %></a>
+                            <button type="submit" formmethod="get" formaction="/reject/<%= user.id %>">Reject</button>
+                            <button type="submit" formmethod="get" formaction="/accept/<%= user.id %>">Accept</button>
+			</li>
+                        </form>
+                        <% }); %>    
+				
+				
+			</ul>
+		</div>
+		<div class="title">
+			<h1 class="subtittle">Find Friends</h1>
+		</div>
+		<div class="searchbar">
+			<form class="searcher" method="get" action="/search">
+				<label for="search">Search by Name:</label>
+				<input type="text" name="word">
+				<button type="submit">Search</button>
+			</form>
+		</div>
+		<div class="title">
+			<h1 class="subtittle">Friends</h1>
+		</div>
+		<div class="f-list">
+			<ul>
+                            <% accepted.forEach(function(user){ %> 
+                            <li>
+				<% if(user.photo===0){ %>
+                                    <img src="/img/NoProfile.png" class="user-avatar">
+                                <% }else{ %>
+                                    <img src="/image/<%= user.id %>" class="user-avatar">
+                                <% } %>
+                                <a class="name" href="/user/<%= user.id %>"><%= user.name %></a>
+                            </li>
+                            <% }); %>  
+				
+			</ul>
+		</div>
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>

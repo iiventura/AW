@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Register</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/">Login</a>
+				</li>
+				<li>
+					<a href="/register">New User</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+	<div class="title">
+            <h1><%= title %></h1>
+	</div>
+        <% if(warnings.length>0){ %>
+            <div class="warnings">
+            The information entered on the form is incorrect:
+                <ul>
+                    <% warnings.forEach(function(error) { %>
+                    <li><%= error %></li>
+                    <% }); %>
+                </ul>  
+            </div>
+        <% } %>
+	<div class="register-page"> 
+            <form class="register-form" method="post" action="/register" enctype="multipart/form-data"> 			
+		<label >Email:</label> 
+                    <input  type="email" name="email" placeholder="user@mail.com"> 
+					
+		<label>Password:</label>
+                    <input type="password" name="password" placeholder="password">
+					
+		<label>Full name:</label>
+                    <input type="text" name="name" placeholder="Name LastName" >
+					
+		<label>Gender:</label>
+                    Male<input type="radio" name="sex" value="M"> 
+                    Female<input type="radio" name="sex" value="F">
+                    Other<input type="radio" name="sex" value="O">
+			
+		<label>Date of birth</label>
+		<input type="date" name="birthdate" placeholder="mm/dd/aaaa"  
+						min="1945-12-31" max="2000-01-02">
+					
+		<label >Profile photo</label>
+                    <input class="inputPhoto" type="file" name="foto"> 
+					
+                <button type="submit">Create User</button>
+	</form>
+    </div>
+    </main>
+    <footer>
+	<p>Created By <strong class="darklight">Silvia Martin</strong>
+	and <strong class="darklight">Irene Ventura</strong></p>
+    </footer>
+</body>
+</html>

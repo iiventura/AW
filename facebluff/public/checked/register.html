@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Register</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="">Login</a>
+				</li>
+				<li>
+					<a href="">New User</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div class="title">
+			<h1>New User</h1>
+		</div>
+			<div class="register-page"> <!-- donde se coloca el cuadro -->
+
+				<form class="register-form" method="" action=""> <!-- indicamos que creamos un formulario-->
+				
+						<label >Email:</label> <input  type="text" name="Email" placeholder="user@mail.com"> 
+					
+						<label>Password:</label><input type="password" name="Password" placeholder="password">
+					
+						<label>Full name:</label><input type="text" name="nombre_completo" placeholder="Name FirstName" >
+					
+						<label>Sex:</label>
+
+							Male<input type="radio" name="sexo" value="hombre"> 
+							
+							Female<input type="radio" name="sexo" value="mujer">
+							
+							Other<input type="radio" name="sexo" value="otro">
+			
+						<label>Date of birth</label>
+						<input type="date" name="fecha_nacimeinto" placeholder="dd/mm/aaaa"  
+						max="1979-12-31" min="2000-01-02">
+					
+						<label >Profile photo</label><input class="inputPhoto" type="file" name="foto_perfil"> 
+					
+
+					<button>Create User</button>
+				</form>
+		</div>
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>

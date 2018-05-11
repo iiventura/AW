@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Question</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/profile">Profile</a>
+				</li>
+				<li>
+					<a href="/friends">Friends</a>
+				</li>
+				<li>
+					<a href="/questionList">Questions</a>
+				</li>
+				<li>
+					<a href="/logout">Logout</a>
+				</li>
+				<li class="user-data"><img src="/image/<%= id %>" class="user-points"><%= points %> points</li>
+			</ul>
+			
+		</div>
+	</header>
+	<main>
+		<div class="title">
+			<h1 class="subtittle"> ¿ <%= titleQuestion %> ?</h1>
+		</div>
+
+		<div class="intro"> 			
+                    <p>
+                        <% if(preguntaContestada) { %>
+                                <form method="get" action="/answerMyself" >
+                                    You haven't answered yet. <br>
+                                    <button class="boton" action="/answerMyself"> Answer the question</button><br>
+                                    The next users are answered this question.
+                                </form> 
+                        <% }else{ %>
+                             You haven answered yet.
+                        <% } %>
+                    </p>
+		</div>
+
+		<div class="answers-list">
+                    <ul>
+                        <% amigos.forEach((amg)=>{ %>
+                            <form>
+                                <li> 
+                                     <img  src="/image/<%= amg.id_amigo %>" class="user-avatar">
+                                     <%= amg.name %>
+                                     <% if(amg.state === "none") { %>
+                                        <button type="submit" formmethod="get" formaction="/answerOther/<%= amg.id_amigo%>" >
+                                           Guess</button>  
+                                    <% }else{ %>
+                                        <% if(amg.state === "correct") { %>
+                                            <img  src="img/acierto.png" class="result" >
+                                        <% }else{ %>
+                                            <img  src="/img/error.png" class="result" >
+                                        <% } %>
+                                    <% } %>
+                                </li>
+                            </form>  
+                        <% }); %>
+                        
+                    </ul>
+		</div>
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>
+

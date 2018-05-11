@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FaceBluff - Add question</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/Logo.png" alt="FaceBluff-Logo">
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/profile">Profile</a>
+				</li>
+				<li>
+					<a href="/friends">Friends</a>
+				</li>
+				<li>
+					<a href="/questions">Questions</a>
+				</li>
+				<li>
+					<a href="/logout">Logout</a>
+				</li>
+				 <li class="user-data">
+                                    <% if(photo===1){ %>
+                                        <img src="/image/<%= id %>" class="user-points">
+                                    <% }else{ %>
+                                        <img src="/img/NoProfile.png" class="user-points">
+                                    <% } %>
+                                    <%= points %> points
+                                 </li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<div class="title">
+			<h1>New question User</h1>
+		</div>
+                
+                <% if(warnings.length>0){ %>
+
+                    <div class="warnings">
+                        <ul>
+                            <% warnings.forEach(function(error) { %>
+                            <li><%= error %></li>
+                            <% }); %>
+                        </ul>  
+                    </div>
+                <% } %>
+
+                <div class="new-question">
+                    <form method="post" action="/newquestion" >
+
+                        <label>Title:</label> 
+                        <input type="text"  name="titleQuestion" >
+                    
+                        <label>True option:</label> 
+                        <input type="text"  name="trueOption" >
+                        
+                        <label class="opt">Options (split the options with '@'):</label>                  
+                        <textarea type="textArea"  name="options"> </textarea>
+                        <button type="submit"> Create </button>
+                    </form>                
+                    
+
+                </div>
+	</main>
+	<footer>
+		<p>Created By <strong class="darklight">Silvia Martin</strong>
+			and <strong class="darklight">Irene Ventura</strong></p>
+	</footer>
+</body>
+</html>
