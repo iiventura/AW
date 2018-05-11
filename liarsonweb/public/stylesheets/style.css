@@ -1,0 +1,396 @@
+body{
+  background-color: #E3E3ff;
+}
+
+/*HEADER*/
+header{
+  width: 1333px;
+  height: 50px;
+  background-color: #171715;
+  clear:both;
+}
+
+#bar{
+  padding:15px; 
+}
+
+
+#left-bar{
+  width:50%;
+  float: left;
+}
+
+#left-bar a{
+  font-size: 17px;
+}
+/*Link del Register*/
+.message{
+  font-family: 'Oxygen', sans-serif;
+  margin-left: 35px;
+  
+}
+
+.message a{
+  text-decoration: none;
+  color:black;
+}
+/*Contenido del lado izq del menu*/
+
+#web-title{
+  font-family: 'Anton', sans-serif;
+  margin-left: 25px; 
+}
+
+#web-title {
+  color:  #F59018;
+  text-decoration: none;
+}
+
+#bar a:hover{
+   color: #BD2404;
+}
+
+#right-bar{
+  width: 50%;
+  float: right;
+}
+/*Contenido del lado der del menu*/
+
+/*Contiene el nombre del usuario*/
+#side-right p{
+  color:#F59018;
+  margin-left: 400px;
+  margin-right: 15px;
+  display: inline;
+  font-family: 'Oxygen', sans-serif;
+}
+/*Boton de logout*/
+
+#side-right button{
+   width: 15%;
+   border: 0;
+   background: #BD2404;
+   height: 25px;
+   border-radius: 15px; 
+   color: #E3E3ff;
+  font-family: 'Anton', sans-serif;
+}
+#side-right button:hover{
+  background: #F59018;
+  color: #BD2404;
+}
+
+
+/*FOOTER*/
+footer{
+  color: #E3E3ff;
+  background-color: #171715;
+  text-align: center;
+  height: 25px;
+  clear: both;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.darklight{
+  color: #F59018;
+}
+
+
+
+/*MAIN*/
+main{
+  margin-top: 20px;
+  min-height: 500px;
+}
+
+/* FORM-REGISTER */
+#form-log{
+  margin:auto;
+	width: 50%;
+  background-color: #F59018;
+}
+
+.subtitle{
+  margin-left: 50px;
+  color: #BD2404;
+  font-family: 'Anton', sans-serif;
+}
+
+#logger{
+  color: #BD2404;
+  margin:auto;
+  width:50%;
+}
+
+#logger label{
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+#logger input[type="email"],input[type="password"]{
+  width: 80%;
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#logger button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  width: 100px;
+  color: #E3E3ff;
+  background: #BD2404;
+  border: 0px;
+  border-radius: 15px;
+  height: 30px;
+}
+
+#logger button:hover{
+  color: #F59018;
+}
+
+/*Menu Partidas*/
+#match-list{
+  width: 100%;
+  clear: both;
+  background-color: #BD2404;
+  min-height: 20px;
+  
+}
+
+/*Links menu partidas*/
+#match-list li{  
+  padding: 10px;
+  margin-left: 15px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 17px;
+  color: #E3E3ff;
+  list-style: none;
+  display: inline;
+}
+
+#match-list button{
+ background: #BD2404;
+ border: 0;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 17px;
+  color: #E3E3ff;
+}
+#match-list button:hover{
+  color: #F59018;
+}
+
+
+/*CREATE & JOIN MATCHES*/
+#create-match, #join-match{
+  margin: auto;
+  width: 60%;
+  background-color: #F59018;
+  min-height: 120px;
+}
+
+/*Contenedores de los form */
+.info-main{
+  margin: auto;
+  width: 70%;
+}
+
+.info-main input {
+  width: 80%;
+  height:20px;
+}
+
+.info-main button{
+  width: 100px;
+  height: 25px;
+  border-radius: 15px;
+  border: 0;
+  background: #BD2404;
+  color: #E3E3ff;
+  font-family: 'Anton', sans-serif;;
+}
+
+/*Contenedor de Partidas*/
+.wrapper{/*contenedor+sidebar*/
+  margin: auto;
+  width: 90%;
+  min-height: 500px;
+  margin-top: 10px;
+}
+
+/*Contenedores del Match*/
+#content{/*Contenedor de tablas y boton update*/
+  float:left;
+  width:65%;
+  min-height:500px;
+}
+
+#sidebar{ /*contenedor de tablero*/
+  float: right;
+  width: 32%;
+}
+
+
+/*Contenedores internos del updater*/
+#updater{
+  background: #F59018;
+  min-height: 150px;
+}
+
+#left-updater{
+  float: left;
+  width: 80%;
+  min-height: 200px
+}
+
+#right-updater{/*Contenedor Boton UPDATE*/
+  float: right;
+  width: 20%;
+  margin-top: 30px;
+}
+
+/*Boton UPDATE*/
+#right-updater button{
+  margin: auto;
+  width: 60%;
+  height: 30px;
+  border: 0px;
+  color: #E3E3FF;
+  background: #BD2404;
+  border-radius: 15px;
+  font-size: 17px;
+  font-family: 'Anton', sans-serif;
+  padding: 2px;
+}
+
+#updater p{
+  color: #BD2404;
+  font-family: 'Oxygen', sans-serif;
+  margin-left: 80px;
+  margin-right: 20px;
+}
+
+
+
+/*Contenedores internos del sidebar*/
+#sidebar {
+  font-size: 17px;
+}
+
+#sidebar table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#sidebar th,caption,td{
+   border: 2px solid #750401;
+}
+
+#sidebar td{
+  text-align: center;
+}
+
+#sidebar th{
+  background-color: #750401;
+  color: #E3E3FF;
+}
+
+#sidebar th, td{
+    font-family: 'Oxygen', sans-serif;
+}
+
+#sidebar td{
+  width: 50%;
+}
+#sidebar caption{/*Tituolo tabla*/
+  font-family: 'Anton', sans-serif;
+  font-size:25px;
+  background-color: #F59018;
+  color:#750401;
+}
+
+#turn{/*Cuando sea el turno de un usuario*/
+  background-color: #BD2404;
+   color: #E3E3FF;
+}
+
+
+/*Contenedor de las Cartas de Todos*/
+.cardstable, .mycards{
+  clear: both;
+  min-height: 200px;
+  background-color: #F59018;
+}
+
+.mycards{/*Para separar el ultimo contenedor del borde y footer*/
+  margin-bottom: 20px;
+}
+
+.subgame{/*Maneja los titulos de los subcontenedores de la partida*/
+  background-color: #BD2404;
+  color: #E3E3FF;
+}
+.subgame h1{
+  margin-left: 50px;
+  font-family: 'Anton', sans-serif;
+}
+
+/*Contenedor de tus Cartas*/
+#cards-list nav{
+  margin: auto;
+  width: 80%
+}
+
+#its-turn{
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+#its-turn button{
+  font-family: 'Anton', sans-serif;
+  font-size: 17px;
+}
+#lie{
+  background: #BD2404;
+  color: #E3E3FF;
+  border:0px;
+  height: 40px;
+  
+}
+
+#yours{
+  background-color:#750401;
+  color: #E3E3FF;
+  border:0px;
+  height: 40px;
+}
+
+#no-turn{
+  font-family: 'Oxygen', sans-serif;
+  margin-left: 70px;
+  margin-top:  20px;
+ 
+}
+
+#no-turn p{
+   margin-bottom: 30px;
+}
+
+/*Notificaciones*/
+#notify{
+  background-color: #BD2404;
+  color:  #E3E3FF;
+  margin: auto;
+  width: 50%;
+   font-family: 'Oxygen', sans-serif;
+  opacity: 0.75;
+}
+
+#notify p, #notify ul{
+  margin-left: 50px;
+}
+
+

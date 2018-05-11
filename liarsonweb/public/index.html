@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Liars on Web</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script src="javascripts/jquery-3.2.1.js"></script>
+        <script src="javascripts/desing.js"></script> <!--JQUERY  -->
+        <script src="javascripts/main.js"></script> <!-- MAIN (DOM)+AJAX   -->
+       <link href="https://fonts.googleapis.com/css?family=Anton|Oxygen" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        
+    </head>
+    <body>
+       <!-- HEADER -->
+        <header>
+            <div id="bar">
+                <div id="left-bar">
+                     <a  id="web-title" href="/">Liars on Web</a>
+                </div>
+                <div id="right-bar">
+                    <div id="side-right">
+                        <p>Username</p>
+                        <button id="out">Logout</button>
+                    </div>
+                </div>
+            </div>
+           
+        </header>
+       <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+        <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+       <!--MAIN -->
+       <main>
+           <!-- NOTIFICACION BAR -->
+           <div id="notify">
+               <p> The following errors have occurred:</p>
+               <ul>
+                   
+               </ul>
+           </div>
+           
+             <!--FORM-REGISTER -->
+            
+            <div id="form-log">
+                <div class="subtitle">
+                    <h1>Identification</h1>
+                </div>
+                <div id="logger">
+                    
+                    <label>Username</label>
+                        <input type="email" name="user" placeholder="user@mail.com">
+                    <label>Email</label>  
+                        <input type="password" name="pass" placeholder="password">
+                        <button  id="log" >Login</button>
+                        <button  id="new" >Register</button>
+                </div>
+            </div> 
+            <!--////////////////////////////////////////////////////////////////////////////////////////-->
+             
+            <!--MATCHES MENU LIST -->
+            <div id="match-list">
+                <ul><!--Aqui van todas las partidas del usuario -->
+                    <li id="init"><button id="home">Home</button></li>
+                </ul>
+            </div>
+            <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+            <!-- MAIN MATCHES -->
+            
+            <div id="main-matches">
+                <div id="create-match">
+                    <div class="subtitle">
+                        <h1>Create New Match</h1>
+                    </div>
+                    <div class="info-main">
+                         <input type="text" name="gamename">
+                         <button id="create">Create</button>
+                    </div>
+                </div>
+                <div id="join-match">
+                    <div class="subtitle">
+                        <h1>Join an existing Match</h1>
+                    </div>
+                    <div class="info-main" >
+                       <input type="text" name="joingame">
+                       <button id="join">Join</button>
+                    </div>
+                </div>
+            </div> 
+            <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+            <!--MATCH-CONTAINER -->
+            <div class="wrapper">
+                <!--INFORMATION -->
+                <div id="content">
+                    <!--UPDATER MATCH-->
+                   <div id="updater">
+                        <div id="right-updater">
+                            <button id="up">Update</button>
+                            
+                        </div>
+
+                        <div id="left-updater">
+                            <div class="subtitle">
+                                <h1>Partida Amiguetes</h1>
+                            </div>
+                            <div id="intro">
+                                <p>La partida aun no tiene suficiente jugadores, el identificador de esta partida es:</p>
+                            </div>
+                        </div>
+                   </div> 
+                   <!--////////////////////////////////////////////////////////////////////////////////////////-->
+                   
+                   <!--CARDS ON TABLE-->
+                   <div class="cardstable">
+                       <div class="subgame">
+                           <h1>Cards on Table</h1>
+                       </div>
+                       <div></div>
+                   </div>
+                   <!--////////////////////////////////////////////////////////////////////////////////////////-->
+                   <!--YOUR CARDS-->
+                   <div class="mycards">
+                       <div class="subgame">
+                           <h1>Your Cards</h1>
+                       </div>
+                       <div id="cards-list">
+                           <nav>
+                               <a><img src="./images/10_D.png"></a>
+                              <a><img src="./images/10_D.png"></a>
+                              <a><img src="./images/10_D.png"></a>
+                              <a><img src="./images/10_D.png"></a>
+                              <a><img src="./images/10_D.png"></a>
+                               
+                           </nav>
+                       </div>
+                       <div id="its-turn">
+                           <form >
+                               <button id="yours">Play your Cards</button>
+                               <button id="lie">Liar!</button>
+                           </form>
+                       </div>
+                       <div id="no-turn">
+                           <p>It's not your turn yet.</p>
+                       </div>
+                   </div>
+                   <!--////////////////////////////////////////////////////////////////////////////////////////-->
+                   
+                </div>
+                 <!--////////////////////////////////////////////////////////////////////////////////////////-->
+                <!--CONTENT TABLE-->
+                <div id="sidebar">
+                    <!--PLAYERS TABLE-->
+                    <table>
+                        <caption><strong>Players</strong></caption>    
+                        <tr> <!-- filas -->
+                            <th>Name</th> <!-- titulo columna -->
+                            <th>Played Cards</th>
+                        </tr>
+                        <!--<tr>
+                            <td> Javi</td> 
+                            <td>5</td>
+                        </tr>
+                        <tr id="turn">
+                            <td> Nacho</td> 
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td> Manuel</td> 
+                            <td>9</td>
+                        </tr>-->
+                    </table>
+                </div>
+
+                    
+                </div>
+            </div>
+          
+       </main>
+        <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <!-- FOOTER -->
+       <footer>
+        <p>Created By <strong class="darklight">Silvia Martin</strong>
+            and <strong class="darklight">Irene Ventura</strong></p>
+        </footer>
+         <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+        
+      
+    </body>
+</html>
