@@ -1,0 +1,28 @@
+.contenedorPerfil{
+	display: none !important;
+}
+
+#tag{
+	color:rgb(200,200,200);
+}
+
+.lista{
+   list-style-type: disc;
+ }
+
+.tachado{
+	text-decoration:line-through;
+	color:grey;
+}
+
+.tagMarron{
+	display: none !important;
+}
+
+.contenedorTexto{
+	display: none !important;
+}
+
+.contenedorEliminar{
+	display: none !important;
+}

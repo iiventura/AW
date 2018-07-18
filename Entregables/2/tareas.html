@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="tareas.css" media="screen"/>
+	<link rel="stylesheet" href="tareasPrint.css" media="print"/>
+		<title> Gestor de tareas </title>   <!-- titulo de la pag-->
+		<meta charset="utf-8"/>
+</head>
+
+<body>
+	
+	<div class="contenedorGeneral">
+	
+		
+		<div class="contenedorFila1">
+			
+			<div class="contenedorTareas">
+				<img src="Logo.png">
+			</div>
+
+			<div class="contenedorPerfil">
+				
+				<div>
+					<img src="NoPerfil.png" id="fotoPerfil" >
+				</div>
+
+				<div class="contenedorPerfilDesconectar">
+					<p id="user"> user@mail.com </p>
+					<p>			 
+						 <a href=""> 
+						 	<button type="button" class="boton" id="botonIluminarNaranja"> 
+						 		Desconectar
+							</button>
+						 </a>
+					</p>
+				</div>
+			</div>
+		</div>
+	
+		<div class="contenedorListaTareas" > 
+
+			<div class="filasListaTareas">
+
+				<div class="opcion"> 
+
+					<div>
+						<p id="textSe" >
+							<li>
+								Preparar práctica PDAP 
+								<span class="boton" id="tag" > pdap</span>
+								<span class="boton" id="tag"> practica</span>
+							</li>
+						</p>
+					</div>
+
+					<div id="ajusteMargenes">
+						<button type="submit" class="tagMarron" id="botonIluminar">
+							<img src="tick.gif"> Marcar finalizada
+						</button>
+					</div>
+				</div>
+
+				<div class="opcion">
+					<li class="tachado" id="fechaCongreso">
+						Mirar fechas congreso 
+					</li>
+				</div>
+
+				<div class="opcion">
+
+					<div>
+						<p id="textSe"> 
+							<li>
+								Ir al supermercado
+								<span class="boton" id="tag"> personal</span>
+							</li>
+						</p>
+					</div>
+
+					<div id="ajusteMargenes">
+						<button type="submit" class="tagMarron" id="botonIluminarNaranja">
+							<img src="tick.gif"> Marcar finalizada
+						</button>
+					</div>
+				</div>
+
+				<div class="opcion"> 
+
+					<div>
+						<p id="textSe"> 
+							<li>
+								Mudanza
+								<span class="boton" id="tag"> personal</span>
+							</li>
+						</p>
+					</div>
+
+					<div id="ajusteMargenes">
+						<button type="submit" class="tagMarron"  id="botonIluminar">
+							<img src="tick.gif"> Marcar finalizada
+						</button>
+					</div>							
+				</div>
+
+				<div class="contenedorTexto">
+						 <input type="text" id="cuadroTexto">
+						 <button type="button" class="botonAñadir" id="botonIluminarBlanco" >	
+							Añadir
+						 </button>		
+				</div>
+			</div>
+
+			<div  class="contenedorEliminar">
+				<button type="button" class="boton" id="botonIluminarNaranja">
+					Eliminar tareas completadas
+				</button>
+			</div>
+		</div><!-- contenedor de la lista de tareas -->
+	</div><!-- contenedor general -->
+
+</body>
+
+</html>

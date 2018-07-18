@@ -1,0 +1,84 @@
+/* aplicamos estilo a las etiquetas que utilicen este css */
+
+body{
+	text-align: justify;
+	font-family: "calibri light", "Geneva", sans-serif;
+}
+
+h1{
+	color: blue;
+}
+
+h2 {
+	color: blue;
+	text-decoration: underline;
+}
+
+.titulo{
+	background-color: cyan;
+	text-align: center;
+	height: 150px;
+	padding: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#letarasTitulo{
+	color: rgb(105,65,255);
+}
+
+blockquote{
+	font-style: oblique;
+}
+
+.horario{
+	background-color:#FBF690 ;
+	border: 2px solid black; 
+}
+
+.fila-Principal{
+	background-color:rgb(101,39,14);
+	color: white;
+	font-weight: bold;
+	border: 2px solid black; 
+}
+
+.filas-Secundrias{
+	background-color:rgb(69,0,33);
+	color: white;
+	font-weight: bold;
+	border: 2px solid black; 
+}
+
+.sesion{
+	background-color: rgb(165,228,232);
+	border: 2px solid black; 
+}
+
+.naranja{
+	background-color: rgb(254,185,113);
+	border: 2px solid black; 
+}
+
+.asamblea{
+	background-color: rgb(238,182,255);
+	
+}
+
+.tabla{
+	border-collapse: collapse;
+	margin-left: 50px;
+}
+
+#texto_Granate{
+	color: purple;
+}
+
+#presenracion{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#POL{
+	color:#00b386;
+}
